@@ -33,4 +33,4 @@
 
 ### 🐍 Contribution Snake Animation
 
-![Snake Animation](https://github.com/Gabriel-Ctrll/Gabriel-Ctrll/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://raw.githubusercontent.com/Gabriel-Ctrll/Gabriel-Ctrll/output/github-contribution-grid-snake.svg)
