@@ -34,10 +34,13 @@ jobs:
         uses: Platane/snk@v3
         id: snake-gif
         with:
-          github_user_name: Gabriel-Ctrll
-          outputs: |     
-            dist/github-contribution-grid-snake.gif
-            dist/github-contribution-grid-snake.svg
+              github_user_name: Gabriel-Ctrll
+              outputs: |
+                dist/github-contribution-grid-snake.gif
+                dist/github-contribution-grid-snake.svg
+              grid_size: 9x9
+              color_snake: "#00FF00"
+              color_dots: "#CCCCCC,#B3B3B3,#999999,#808080,#666666"
         env:
            GITHUB_TOKEN: ${{ secrets.PAT }}
 
