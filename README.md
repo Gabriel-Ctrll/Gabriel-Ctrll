@@ -23,7 +23,7 @@
 ### 📬 Contact
 
 <div> 
-  <a href="(https://www.linkedin.com/in/gabriel-araujo-da-silva-/)" target="_blank">
+  <a href="https://www.linkedin.com/in/gabriel-araujo-da-silva-/" target="_blank">Gabriel Araujo da Silva no LinkedIn</a>
     <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white">
   </a> 
   <a href="araujo.gabrielsilva2@gmail.com">
