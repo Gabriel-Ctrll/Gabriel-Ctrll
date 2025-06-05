@@ -11,15 +11,6 @@
   <img align="center" alt="Git" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
 </div><br>
 
-### 📊 GitHub Stats
-
-<div align="center">
-  <a href="https://github.com/Gabriel-Ctrll">
-    <img height="195px" src="https://github-readme-stats.vercel.app/api?username=Gabriel-Ctrll&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true"/>
-    <img height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gabriel-Ctrll&layout=compact&langs_count=7&theme=tokyonight"/>
-  </a>
-</div>
-
 ### 📬 Contact
 
 <div> 
