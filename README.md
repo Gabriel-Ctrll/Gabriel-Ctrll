@@ -95,8 +95,8 @@ me.say_hi()
 ```yaml
 experiência:
   - role: "RPA & Python Developer"
-    empresa: "Freelancer"
-    período: "2023 - Presente"
+    empresa: "XXXXXXX"
+    período: "2021 - "XXXXX"
     skills:
       - Automação de processos
       - Web scraping
