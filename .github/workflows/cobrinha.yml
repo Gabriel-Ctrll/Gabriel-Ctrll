@@ -1,54 +1,55 @@
-# GitHub Action for generating a contribution graph with a snake eating your contributions.
+name: Generate Snake Animation
 
-# ![snake gif](https://github.com/your-user-name/your-user-name/blob/output/github-contribution-grid-snake.gif)
-
-name: Generate Snake
-
-# Controls when the action will run.
 on:
+  # Executa a cada 12 horas
   schedule:
-      # every 12 hours
     - cron: "0 */12 * * *"
-
-  # This command allows us to run the Action automatically from the Actions tab.
+  
+  # Permite executar manualmente na aba Actions
   workflow_dispatch:
   
-  # Also run on every push on the master branch
+  # Executa a cada push na branch main
   push:
     branches:
-    - main
+      - main
 
-# The sequence of runs in this workflow:
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  generate:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Clone repo
-        uses: actions/checkout@v3
+    timeout-minutes: 10
     
-      - name: Generate the snake files in './dist/'
+    permissions:
+      contents: write
+    
+    steps:
+      # Checkout do repositório
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      # Gera a animação da cobra
+      - name: Generate Snake
         uses: Platane/snk@v3
-        id: snake-gif
         with:
-              github_user_name: Gabriel-Ctrll
-              outputs: |
-                dist/github-contribution-grid-snake.gif
-                dist/github-contribution-grid-snake.svg
+          github_user_name: Gabriel-Ctrl
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean-snake.svg?color_snake=dodgerblue&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/neon-snake.svg?color_snake=#00ff00&color_dots=#0a0,#0d0,#0f0,#3f3,#6f6
+            dist/fire-snake.svg?color_snake=orange&color_dots=#ffeca7,#ffdd00,#ffa700,#ff6000,#ff0000
         env:
-           GITHUB_TOKEN: ${{ secrets.PAT }}
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Mostra o status (debug)
       - name: Show build status
         run: git status
-
-      - name: Push new files to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      
+      # Faz o push para a branch output
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
           commit_message: Update snake animations
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
