@@ -30,7 +30,7 @@ jobs:
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
-          github_user_name: Gabriel-Ctrl
+          github_user_name: Gabriel-Ctrll
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
